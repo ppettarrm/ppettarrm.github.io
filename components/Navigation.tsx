@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, use } from "react";
 import {
   AiOutlineClose,
   AiOutlineMail,
@@ -13,27 +13,37 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [shadow, setShadow] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  const holdMenu = () => {
-    setIsOpen(isOpen);
-  };
+  useEffect(() => {
+    const handleShadow = () => {
+      if(window.scrollY >= 90){
+        setShadow(true);
+      }else{
+        setShadow(false);
+      }
+    };
+    window.addEventListener('scroll', handleShadow);
+  }, []);
 
   return (
-    <div className="fixed w-full h-20 shadow-xl z-100">
+    <div
+      style={{backgroundColor: "#ffffff"}}
+    className={shadow ? "fixed solid w-full h-20 shadow-xl z-100 scroll-smooth" : "fixed bg-white w-full h-20 z-100 scroll-smooth"}>
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <Image src="/../public/logo.png" alt="Logo" width={125} height={75} />
+        <div/>
         <div>
           <ul className="hidden md:flex">
-            <Link href="#About">
+            <Link href="/#About">
               <li className="ml-10 text-sm uppercase hover:border-b">
                 About me
               </li>
             </Link>
-            <Link href="#Skills">
+            <Link href="/#Skills">
               <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
             </Link>
             <Link href="#Projects">
@@ -41,7 +51,7 @@ const Navigation = () => {
                 Projects
               </li>
             </Link>
-            <Link href="#Contact">
+            <Link href="/#Contact">
               <li className="ml-10 text-sm uppercase hover:border-b">
                 Contact me
               </li>
@@ -69,12 +79,7 @@ const Navigation = () => {
         >
           <div>
             <div className="flex w-full items-center justify-between">
-              <Image
-                src="/../public/logo.png"
-                alt="Logo"
-                width={87}
-                height={35}
-              />
+              <div/>
               <div
                 onClick={toggleMenu}
                 className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
