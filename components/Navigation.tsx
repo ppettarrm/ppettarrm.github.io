@@ -1,4 +1,15 @@
-import { useState } from 'react';
+/* eslint-disable react/no-unescaped-entities */
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import {
+  AiOutlineClose,
+  AiOutlineMail,
+  AiOutlineMedium,
+  AiOutlineMenu,
+} from "react-icons/ai";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,81 +18,121 @@ const Navigation = () => {
     setIsOpen(!isOpen);
   };
 
+  const holdMenu = () => {
+    setIsOpen(isOpen);
+  };
+
   return (
-    <nav className="bg-gray-900">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div className="relative flex items-center justify-between h-16">
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <button
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              aria-expanded="false"
-              onClick={toggleMenu}
-            >
-              <span className="sr-only">Open main menu</span>
-              <svg
-                className={`${isOpen ? 'hidden' : 'block'} h-6 w-6`}
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-              <svg
-                className={`${isOpen ? 'block' : 'hidden'} h-6 w-6`}
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
+    <div className="fixed w-full h-20 shadow-xl z-100">
+      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
+        <Image src="/../public/logo.png" alt="Logo" width={125} height={75} />
+        <div>
+          <ul className="hidden md:flex">
+            <Link href="#About">
+              <li className="ml-10 text-sm uppercase hover:border-b">
+                About me
+              </li>
+            </Link>
+            <Link href="#Skills">
+              <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
+            </Link>
+            <Link href="#Projects">
+              <li className="ml-10 text-sm uppercase hover:border-b">
+                Projects
+              </li>
+            </Link>
+            <Link href="#Contact">
+              <li className="ml-10 text-sm uppercase hover:border-b">
+                Contact me
+              </li>
+            </Link>
+          </ul>
+          <div onClick={toggleMenu} className="md:hidden cursor-pointer">
+            <AiOutlineMenu size={30} />
           </div>
-          <div className="flex-1 flex pl-[45%] sm:pl-0 sm:justify-start">
-              <a href="#" className="text-white">
-                LOGO
-              </a>
+        </div>
+      </div>
+
+      <div
+        className={
+          isOpen
+            ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70"
+            : "hidden"
+        }
+      >
+        <div
+          className={
+            isOpen
+              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
+              : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+          }
+        >
+          <div>
+            <div className="flex w-full items-center justify-between">
+              <Image
+                src="/../public/logo.png"
+                alt="Logo"
+                width={87}
+                height={35}
+              />
+              <div
+                onClick={toggleMenu}
+                className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
+              >
+                <AiOutlineClose />
+              </div>
             </div>
-          <div className="flex-2 flex justify-center sm:items-stretch sm:justify-end">
-            <div className="hidden sm:block sm:ml-6 justify-end">
-              <div className="flex space-x-4">
-                <a href="#About" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                  About Me
-                </a>
-                <a
-                  href="#Projects"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  Projects
-                </a>
-                <a
-                  href="#Contact"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  Contact Me
-                </a>
+            <div className="border-b border-gray-300 my-4">
+              <p className="w-[85%] md:w-[90%] py-4 font-semibold">Let's build future together!</p>
+            </div>
+          </div>
+          <div className="py-4 flex flex-col">
+            <ul className="uppercase font-semibold">
+              <Link onClick={toggleMenu} href="#About">
+                <li className="py-3 text-sm">About me</li>
+              </Link>
+              <Link onClick={toggleMenu} href="#Skills">
+                <li className="py-3 text-sm">Skills</li>
+              </Link>
+              <Link onClick={toggleMenu} href="#Projects">
+                <li className="py-3 text-sm">Projects</li>
+              </Link>
+              <Link onClick={toggleMenu} href="#Contact">
+                <li className="py-3 text-sm">Contact me</li>
+              </Link>
+            </ul>
+            <div className="pt-40">
+              <p className="pb-3 uppercase tracking-widest text-[#5651e5] font-extrabold">
+                Let's Connect
+              </p>
+              <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
+                <Link href="https://www.linkedin.com/in/petar-maletin-37804225a/">
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                    <FaLinkedinIn />
+                  </div>
+                </Link>
+                <Link href="https://www.github.com/ppettarrm">
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                    <FaGithub />
+                  </div>
+                </Link>
+                <Link href="">
+                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <AiOutlineMail />
+                </div>
+                </Link>
+                <Link href="https://ppettarrm.github.io/">
+                <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                  <BsFillPersonLinesFill />
+                </div>
+                </Link>
               </div>
             </div>
           </div>
         </div>
-        <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden`}>
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-              About Me
-            </a>
-            <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-          Projects
-        </a>
-        <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-          Contact Me
-        </a>
       </div>
     </div>
-  </div>
-</nav>
-);};
+  );
+};
 
 export default Navigation;
