@@ -21,9 +21,9 @@ const SkillsPage = () => {
   const skills = [
     { skillName: "Python", imagePath: "/python.png" },
     { skillName: "Java", imagePath: "/java.png" },
-    { skillName: "C", imagePath: "/c.png" },
-    { skillName: "C++", imagePath: "/cpp.png" },
-    { skillName: "C#", imagePath: "/csharp.png" },
+    { skillName: "C", imagePath: "/C.png" },
+    { skillName: "C++", imagePath: "/Cpp.png" },
+    { skillName: "C#", imagePath: "/CSharp.png" },
     { skillName: "Next.js", imagePath: "/nextjs.png" },
     { skillName: "React.js", imagePath: "/react.png" },
   ];
