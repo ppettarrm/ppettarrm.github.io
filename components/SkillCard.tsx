@@ -4,7 +4,7 @@ const SkillCard = ({ skillName, imagePath }) => {
   return (
     <div className="flex m-5">
       <div className="flex text-center justify-center items-center p-2">
-        <div className="bg-white h-[12rem] rounded-lg shadow-lg p-4 hover:scale-125 ease-in-out duration-500">
+        <div className="bg-white h-[12rem] rounded-lg border-[#242425] shadow-xl border-2 p-4 hover:scale-125 ease-in-out duration-500">
           <div className="flex mb-5 justify-center items-center">
             <Image src={imagePath} alt={skillName} width={100} height={100} />
           </div>
@@ -19,13 +19,13 @@ const SkillCard = ({ skillName, imagePath }) => {
 
 const SkillsPage = () => {
   const skills = [
-    { skillName: "Python", imagePath: "/../public/python.png" },
-    { skillName: "Java", imagePath: "/../public/java.png" },
-    { skillName: "C", imagePath: "/../public/c.png" },
-    { skillName: "C++", imagePath: "/../public/cpp.png" },
-    { skillName: "C#", imagePath: "/../public/csharp.png" },
-    { skillName: "Next.js", imagePath: "/../public/nextjs.png" },
-    { skillName: "React.js", imagePath: "/../public/react.png" },
+    { skillName: "Python", imagePath: "/python.png" },
+    { skillName: "Java", imagePath: "/java.png" },
+    { skillName: "C", imagePath: "/c.png" },
+    { skillName: "C++", imagePath: "/cpp.png" },
+    { skillName: "C#", imagePath: "/csharp.png" },
+    { skillName: "Next.js", imagePath: "/nextjs.png" },
+    { skillName: "React.js", imagePath: "/react.png" },
   ];
 
   return (

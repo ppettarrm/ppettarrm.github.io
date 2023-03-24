@@ -24,7 +24,7 @@ const Main = () => {
           <h1 className="text-gray-700 text-[40px] uppercase text-center font-extrabold">
             AI Software Engineer
           </h1>
-          <p className="py-4 text-gray-600 max-w-[70%] m-auto font-semibold">
+          <p className="py-4 text-gray-600 max-w-[70%] m-auto font-semibold text-justify">
             Some text Some text Some text Some text Some text Some text
             Some text Some text Some text Some text Some text Some text
             Some text Some text Some text Some text Some text Some text

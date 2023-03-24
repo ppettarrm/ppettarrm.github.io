@@ -14,9 +14,9 @@ export default function Home() {
       </Head>
       <main>
         <div className='scroll-smooth'>
-        <Navigation />
-        <Main />
-        <Skills />
+          <Navigation />
+          <Main />
+          <Skills />
         </div>
       </main>
     </>

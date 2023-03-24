@@ -5,15 +5,16 @@ import { useState, useEffect, use } from "react";
 import {
   AiOutlineClose,
   AiOutlineMail,
-  AiOutlineMedium,
   AiOutlineMenu,
 } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [shadow, setShadow] = useState(false);
+  const [dark, setDark] = useState(true);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
