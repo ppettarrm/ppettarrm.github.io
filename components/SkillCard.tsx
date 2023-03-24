@@ -3,12 +3,12 @@ import Image from "next/image";
 const SkillCard = ({ skillName, imagePath }) => {
   return (
     <div className="flex m-5">
-      <div className="flex text-center justify-center items-center p-2">
+      <div className="inline-block p-2">
         <div className="bg-white h-[12rem] rounded-lg border-[#242425] shadow-xl border-2 p-4 hover:scale-125 ease-in-out duration-500">
-          <div className="flex mb-5 justify-center items-center">
+          <div className="inline-block mb-5 justify-center items-center align-middle">
             <Image src={imagePath} alt={skillName} width={100} height={100} />
           </div>
-          <h2 className="flex-1 flex justify-center text-lg font-medium mb-2">
+          <h2 className="flex justify-center text-lg font-medium mb-2">
             {skillName}
           </h2>
         </div>
@@ -25,6 +25,7 @@ const SkillsPage = () => {
     { skillName: "C++", imagePath: "/Cpp.png" },
     { skillName: "C#", imagePath: "/CSharp.png" },
     { skillName: "Next.js", imagePath: "/nextjs.png" },
+    { skillName: "React.js", imagePath: "/react.png" },
     { skillName: "React.js", imagePath: "/react.png" },
   ];
 
