@@ -49,7 +49,7 @@ const Main = () => {
                   <FaGithub />
                 </div>
               </Link>
-              <Link href="" onClick={() => window.location.href = 'mailto:petar.maletin.1@gmail.com?subject=Petar Maletin | Contact}'}>
+              <Link href="" onClick={() => window.location.href = 'mailto:petar.maletin.1@gmail.com?subject=Petar Maletin | Contact'}>
                 <div className="rounded-full shadow-md shadow-white p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                   <AiOutlineMail />
                 </div>
