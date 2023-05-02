@@ -32,7 +32,7 @@ const Main = () => {
             (ML). My ultimate goal is to leverage my technical expertise to
             develop innovative solutions that can positively impact society. I
             am also familiar with popular ML frameworks, such as TensorFlow and
-            PyTorch, and their practical applications
+            PyTorch, and their practical applications.
           </p>
           <div className="inline pt-40">
             <p className="pb-3 uppercase tracking-widest text-[#5651e5] font-extrabold">
@@ -49,7 +49,7 @@ const Main = () => {
                   <FaGithub />
                 </div>
               </Link>
-              <Link href="">
+              <Link href="" onClick={() => window.location.href = 'mailto:petar.maletin.1@gmail.com?subject=Petar Maletin | Contact}'}>
                 <div className="rounded-full shadow-md shadow-white p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                   <AiOutlineMail />
                 </div>
