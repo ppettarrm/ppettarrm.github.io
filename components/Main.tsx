@@ -20,20 +20,12 @@ const Main = () => {
             Hi, I'm <span className="text-[#5651e5]">Petar</span>
           </h1>
           <h1 className="text-white text-[40px] uppercase text-center font-bold">
-            <span className="text-[#5651e5]">IT Student</span> at Faculty of
-            Sciences
+            <span className="text-[#5651e5]">JetBrains</span> Campus Ambassador
           </h1>
-          <p className="py-4 text-white max-w-[70%] m-auto font-semibold text-justify">
-            I am a determined IT student at the Faculty of Sciences, University
-            of Novi Sad, with a strong interest in technology. My academic
-            journey has equipped me with expertise in programming languages such
-            as Java, Python, and C, as well as experience in database
-            management, web development, network security, and Machine Learning
-            (ML). My ultimate goal is to leverage my technical expertise to
-            develop innovative solutions that can positively impact society. I
-            am also familiar with popular ML frameworks, such as TensorFlow and
-            PyTorch, and their practical applications.
-          </p>
+          <h1 className="py-4 text-white text-[1.1rem] max-w-[70%] m-auto font-semibold justify-center">
+            IT Student at Faculty of Sciences, University of Novi Sad<br/>
+            BarKod Hackathon Web Developer & Organizer
+          </h1>
           <div className="inline pt-40">
             <p className="pb-3 uppercase tracking-widest text-[#5651e5] font-extrabold">
               Let's Connect
